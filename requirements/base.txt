@@ -1,0 +1,10 @@
+# Core dependencies for the MVP (platform-specific acceleration optional)
+click
+rich
+sentence-transformers
+chromadb
+pymupdf
+python-docx
+torch
+psutil
+numpy

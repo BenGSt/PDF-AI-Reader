@@ -13,7 +13,7 @@ TDD policy (short)
 - All PRs should include tests for new behavior and maintain or improve test coverage.
 
 Test pyramid and types
-- Unit tests (fast, isolated): test single functions/classes. Place under `tests/unit/` or `tests/` with `test_*.py` naming.
+- Unit tests (fast, isolated): test single functions/classes. Place under `tests/unit/` with `test_*.py` naming.
 - Integration tests: test interactions across modules (ChromaDB, embedding pipeline, document loader). Place under `tests/integration/`.
 - Smoke/end-to-end tests: lightweight E2E flows that exercise the full add->index->query path. Place under `tests/smoke/` and name `test_smoke_*.py`.
 

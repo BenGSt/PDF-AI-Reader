@@ -6,6 +6,7 @@ __pycache__/
 .eggs/
 .dist-info/
 .python-version
+.venv/
 venv/
 .env
 .env.*
