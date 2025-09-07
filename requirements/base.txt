@@ -8,3 +8,4 @@ python-docx
 torch
 psutil
 numpy
+aiohttp

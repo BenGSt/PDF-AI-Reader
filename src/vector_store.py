@@ -41,6 +41,26 @@ class SimpleVectorStore:
         scores.sort(key=lambda x: x[0], reverse=True)
         return scores[:top_k]
 
+    def list_documents(self) -> List[Dict[str, Any]]:
+        """Return list of all documents with their metadata."""
+        return [
+            {
+                "id": item["id"],
+                "source": item["metadata"].get("source", "unknown"),
+                "text_length": len(item["text"]),
+                "metadata": item["metadata"]
+            }
+            for item in self.items
+        ]
+
+    def remove_document(self, doc_id: str) -> bool:
+        """Remove a document by ID. Returns True if found and removed."""
+        for i, item in enumerate(self.items):
+            if item["id"] == doc_id:
+                self.items.pop(i)
+                return True
+        return False
+
 
 # convenience singleton for quick CLI usage in scaffold
 _default_store = SimpleVectorStore()
